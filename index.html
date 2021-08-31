@@ -1,0 +1,689 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("2021-05-31T09:00:00.000+00:00");
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+
+  // If the count down is finished, write some text
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
+
+
+<html>
+	<head>
+		<title>Workshop ICRA 2022</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<!-- table style-->
+		<style>
+			a{
+				color: white; 
+			}
+			#schedule_tab {
+			  font-family: Arial, Helvetica, sans-serif;
+			  border-collapse: collapse;
+			  width: 100%;
+			}
+
+			#schedule_tab td, #schedule_tab th {
+			  border: 2px solid #ddd;
+			  padding: 14px;
+			  color: white;
+			}
+
+			#schedule_tab tr:nth-child(even){background-color: #9fabbd;}
+			
+			#schedule_tab tr:hover {background-color: #a8b9d2;}
+
+			#schedule_tab th {
+			  padding-top: 12px;
+			  padding-bottom: 12px;
+			  text-align: left;
+			  background-color: #374e73;
+			  color: white;
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Sidebar -->
+			<section id="sidebar">
+				<div class="inner">
+					<nav>
+						<ul>
+							<li><a href="#intro">Home</a></li>
+							<li><a href="#content">Content</a></li>
+							<li><a href="#schedule">Schedule</a></li>	
+							<li><a href="#papers">Call for Papers</a></li>
+							
+							<li><a href="#talks">Invited speakers</a></li>
+							<li><a href="#org">Organizers</a></li>	
+							<!--li><a href="#collab">Links</a></li-->														
+							<li><a href="#contact">Contact</a></li>
+						</ul>
+					</nav>
+				</div>
+			</section>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Live -->
+					<!--section id="live" class="wrapper style3 fullscreen fade-up">
+						<div class="inner">
+							<h2>2nd Workshop on Representing and Manipulating Deformable Objects @ <a href="https://www.icra2022.org/">ICRA2022</a> </h2>
+							
+							
+
+
+						</div>
+					</section-->
+
+<!-- Intro -->
+					<section id="intro" class="wrapper style1 fullscreen fade-up">
+						<div class="inner">
+							<h2>2nd Workshop on Representing and Manipulating Deformable Objects @ <a href="https://www.icra2022.org/">ICRA2022</a> </h2>
+							
+							
+							<p>
+							Deformable objects manipulation is a key component of a variety of everyday and specialized
+applications, ranging from domestic housework such as cloth folding or food handing, to medical
+scenarios such as surgery and suturing, up to industrial setups such as cable insertion. However, the large
+configuration space of deformable objects causes traditional modelling, planning and control
+approaches to fail when dealing with them. More specifically, unlike in the case of rigid objects, two
+main challenges arise: i) there is no clear and unified state representation and ii) the dynamics is complex
+and highly non-linear. This leads to the absence of current unified solutions and to highly domain-specific
+approaches emerging in the fields of perception, simulation, control and mechanics. In addition, the lack
+of scalable simulation environments limits possible developments in the above fields. We believe that
+robust progress can only be achieved by combining these complementary areas of robotics. Therefore,
+this workshop aims to start a discussion about the current state-of-the-art and possible research
+directions as well as connect people from different sub-fields to solve deformable objects challenges. 
+							</p>
+							
+							<p>  </p>
+							<h4>Link to 1st edition of the workshop: <a href="https://deformable-workshop.github.io/icra2021/">https://deformable-workshop.github.io/icra2021/</a></h4>
+							
+							
+
+
+						</div>
+					</section>
+
+
+				
+
+					<!-- Method -->
+					<section id="content" class="wrapper style2 fade-up">
+						<div class="inner">
+							<h2>Content</h2>
+							<h3>Event description </h3>
+
+							<p> 
+								The workshop is tailored towards researchers interested at deformable object manipulation and closely
+related problems such as modeling, perception, representation and mechanics. This workshop would
+give the community a chance to: identify open research challenges, find new applications for techniques
+that already exist in closely related areas, foster new collaborations, and get a good overview of the state
+-of-the-art from the invited talks. Speakers from the forefront of the research on deformable objects are
+invited to provide top-level insights. Furthermore, a review process from experienced researchers will
+be carried out giving young researchers the opportunity to receive valuable feedbacks.
+The scope of the workshop is intentionally broad as we think that different aspects need to be taken into
+account to effectively handle deformable objects and we want to enclose them in a single event, filling
+the lack of a dedicated session in the main robotics conferences.  
+							</p>
+
+							
+							
+							<p> </p>	
+
+							<h3>Topic relevance </h3>
+							<p> Despite the presence of deformable objects in a wide range of domains and tasks, endowing robots with
+the ability to manipulate them is still an open problem. This is motivated by the extreme complexity of
+representation and dynamics modeling of such objects. Although different methodologies exist in the
+recent state-of-the-art, tackling different aspects of deformable objects, no unified and comprehensive
+solution exists yet that can be easily generalized to non-specific objects. 
+As possible approaches to state representation and modelling, topological coordinates and Finite
+Element Methods have been adopted for solving specific tasks. In contrast, data-driven approaches can
+be leveraged to circumvent explicit modelling at the cost of an expensive data collection. For this,
+although simulation environments would be most suited for collecting large amount of data, the current
+state-of-the-art does not enable it in an efficient and scalable manner. Moreover, even when a
+simulation setup is employed, the transfer of the acquired skills into real-world may be unsuccessful due
+to inaccurate simulation models of the involved dynamics. Alternatively, demonstrating specific
+interactions, and learning from them by imitation, can improve the efficiency of the system setup at the
+cost of its generality.
+In addition, further aspects need to be addressed to effectively manipulate deformable objects. Among
+those, employment and coordination of two or more arms can be necessary to properly manipulate
+highly deformable objects for both prehensile and non-prehensile manipulation. Finding efficient ways
+to combine planning and control is equally important in this regard. Finally, implementing the planned
+interaction can also be improved by specialized grippers or sensors, e.g., optical and haptic perception.</p>
+
+<p>
+
+Specifically, this workshop will include (but is not limited to) the following topics:  </p>
+
+<ul>
+  <li>Representation and state estimation</li>
+  <li> Simulation and modeling </li>
+  <li>Transfer from simulation to reality</li>
+  <li>Data-driven methods: end-to-end learning, learning from demonstration, etc. </li>
+  <li>Perception: state tracking, parameter identification, property detection (e.g. landmarks for
+garments) and classification, etc. </li>
+  <li>Control, visual servoing and planning</li>
+  <li>Multi-arm manipulation</li>
+  <li>Specialized tools, e.g. grippers, and sensors</li>
+  <li>Application-specific challenges: cloth folding, surgical tasks, etc.</li>
+</ul>
+
+
+
+
+							
+
+
+						</div>
+					</section>
+
+
+				<!-- Schedule -->
+					<section id="schedule" class="wrapper style3 spotlights">
+						<div class="inner">
+							<h2>Schedule</h2>
+							<hr style="width:80%;text-align:left;margin-left:5">
+							<div class="row">
+							  
+									<p></p>
+				    				<h3><b> TBA </b></h3> 
+									
+							</div>
+							<!--
+							<h3>Time Zone: GMT+00</h3>
+							<table id="schedule_tab">
+						  <tr>
+						    <th>Time</th>
+						    <th>Activity</th>
+						  </tr>
+						  <tr>
+						    <td>09:00 - 09:15</td>
+						    <td>Opening</td>
+						  </tr>
+						  <tr>
+						    <td>09:15 - 09:45</td>
+						    <td> <b>David Navarro-Alarcon:</b> On Latent Space Representations for Controlling Shapes of Deformable Objects</td>
+						  </tr>
+						  <tr>
+						    <td>09:45 - 10:15</td>
+						    <td> <b>Xiang Li:</b> Adaptive Control for Robotic Manipulation of Deformable Linear Objects  
+									with Offline and Online Learning of Unknown Models</td>
+						  </tr>
+						  <tr>
+						    <td>10:15 - 11:00</td>
+						    <td>Spotlight talks #1:
+								<ul>								
+						    	<li> <b>S. Funabashi</b>, T. Isobe, F. Hongyi, T. Ogata, A. Schmitz, S. Sugano - In-Hand Manipulation of Multi-Fingered Hand with Daily Objects Based on Graph Convolutional Network and 3-Axis Tactile Sensing <a href="spotlight/spot_in_hand_manipulation.pdf" target="_blank">[PDF]</a>  <a href="https://youtu.be/YXoGqTyZims" target="_blank">[Video]</a> <br></li>
+						    	<li> <b>S. Marullo</b>, G. Salvietti, D. Prattichizzo - The Mag-Gripper: A Soft-Rigid Gripper Augmented with an Electromagnet to Precisely Handle Clothes <a href="spotlight/spot_the_mag_gripper.pdf" target="_blank">[PDF]</a> <a href="https://youtu.be/9CGzz0C1avI" target="_blank">[Video]</a> <br></li>
+						    	<li> <b>M. Lee</b>, J. Lee, J. Yoon, D. Lee - Interactive Real-Time Simulation of Robotic Snap Connection Process <a href="spotlight/spot_interactive_real_time.pdf" target="_blank">[PDF]</a> <a href="https://youtu.be/QRSFmom8Dig" target="_blank">[Video]</a> <br></li>
+						    	<li><b> B. Maric</b>, M. Polic, M. Orsag - Soft robotics approach to autonomous plastering <a href="spotlight/spot_soft_robotics.pdf" target="_blank">[PDF]</a> <a href="https://youtu.be/onHI9BCXncM" target="_blank">[Video]</a> <br></li>
+						    	<li> <b>X. Lin</b>, Y. Wang, D. Held - Learning Visible Connectivity Dynamics for Cloth Smoothing <a href="spotlight/spot_learning_visible.pdf" target="_blank">[PDF]</a> <a href="https://youtu.be/JUDvFYWKORY" target="_blank">[Video]</a> <br></li>
+						    	<li> <b>P. Zhou</b>, J. Zhu, S. Huo, D. Navarro-Alarcon - A Latent and Semantic Framework for Deformable Object Representation <a href="spotlight/spot_a_latent_and_semantic.pdf" target="_blank">[PDF]</a> <a href="https://youtu.be/lyatCGPDM6g" target="_blank">[Video]</a> <br></li>
+						    	<li> <b>Z. Weng</b>, F. Paus, A. Varava, H. Yin, T. Asfour, D. Kragic - Graph-based Task-specific Prediction Models for Interactions between Deformable and Rigid Objects <a href="spotlight/spot_graph_based.pdf" target="_blank">[PDF]</a> <a href="https://youtu.be/z-StcIL6VrA" target="_blank">[Video]</a></li>
+								</ul>
+						    </td>
+						  </tr>
+						  <tr>
+						    <td>11:00 - 11:15</td>
+						    <td>Coffee break </td>
+						  </tr>
+						  <tr>
+						    <td>11:15 – 11:45</td>
+						    <td> <b> Zackory M. Erickson:</b> Physics-based Cloth Simulation and Learning Towards Robotic Caregiving </td>
+						  </tr>
+						  <tr>
+						    <td>11:45 – 12:15</td>
+						    <td> <b>Júlia Borràs Sol:</b> On analyzing and  representing cloth manipulation tasks  </td>
+						  </tr>
+						  <tr>
+						    <td>12:15 – 12:45</td>
+						    <td>Open discussion round</td>
+						  </tr>
+						  <tr>
+						    <td>12:45 - 14:00</td>
+						    <td>Lunch</td>
+						  </tr>
+						  <tr>
+						    <td>14:00 – 14:30</td>
+						    <td> <b> Dmitry Berenson: </b> Learning Where to Trust Unreliable Models for Deformable Object Manipulation</td>
+						  </tr>
+						  <tr>
+						    <td>14:30 – 15:00</td>
+						    <td> <b> Wenzhen Yuan: </b> Estimating object hardness with high-resolution tactile sensing</td>
+						  </tr>
+						  <tr>
+						    <td>15:00 – 15:45</td>
+						    <td>Spotlight talks #2:
+						    	<ul class = "spotlight-list">
+								<li> <b>R. A. Laezza</b>, R. Gieselmann, F. T. Pokorny, Y. Karayiannidis - Presenting ReForm, a Robot Learning Sandbox for Deformable Linear Object Manipulation <a href="spotlight/spot_presenting_reform.pdf" target="_blank">[PDF]</a> <a href="https://youtu.be/g9QukordzCU" target="_blank">[Video]</a></li>
+						    	<li> <b>P. Perrusi</b>, A.  Cazzaniga, P. Baksic, E. Tagliabue, E. De Momi, H. Courtecuisse - Learning robotic needle steering from inverse finite element simulations <a href="spotlight/spot_learning_robotic.pdf" target="_blank">[PDF]</a> <a href="https://youtu.be/55EU557D78Q" target="_blank">[Video]</a><br></li>
+						    	<li> <b>X. Ma</b>, D. Hsu, W. S. Lee - Learning Latent Graph Dynamics for Deformable Object Manipulation <a href="spotlight/spot_learning_latent_graph.pdf" target="_blank">[PDF]</a> <a href="https://youtu.be/IjhU2KPGvOw" target="_blank">[Video]</a><br></li>
+						    	<li> <b>M. Dorostian</b>, A. Moradmand, P. Chang, T. Padir - Deformable Objects Manipulation Using Model Adaptation Techniques <a href="spotlight/spot_deformable_objects_manipulation.pdf" target="_blank">[PDF]</a> <a href="https://youtu.be/glgBU6uCWVg" target="_blank">[Video]</a> <br></li>
+						    	<li> <b>A. Longhini</b>, M. Moletta, M. C. Welle, I. Mitsioni, D. Kragic - Perceiving and handling textiles: a robotics perspective <a href="spotlight/spot_perceiving_and_handling.pdf" target="_blank">[PDF]</a> <a href="https://youtu.be/Y54rEFTCF3Y" target="_blank">[Video]</a><br></li>
+						    	<li> <b>S. Dittus</b>, B. Alt, A. Hermann, D. Katic, R. Jäkel, J. Fleischer - Localization and Tracking of User-Defined Points on Deformable Objects for Robotic Manipulation <a href="spotlight/spot_localization_and_tracking.pdf" target="_blank">[PDF]</a> <a href="https://www.youtube.com/watch?v=pdPgOc_-kv8" target="_blank">[Video]</a></p></li>
+								</ul>
+
+						    </td>
+						  </tr>
+						  <tr>
+						    <td>15:45- 16:00</td>
+						    <td>Coffee break </td>
+						  </tr>
+						  <tr>
+						    <td>16:00 – 16:30</td>
+						    <td><b> Dinesh Manocha:</b> Learning based Methods for High-DOF Grasping </td>
+						  </tr>
+						  <tr>
+						  
+						    <td>16:30 – 17:00</td>
+						    <td><b> Jeannette Bohg:</b> Bridging Topology and Geometry Using Reinforcement Learning </td>
+						  </tr>
+						  <tr>
+						    <td>17:00 – 17:45</td>
+						    <td>Open discussion round</td>
+						  </tr>
+						  <tr>
+						    <td>17:45 – 18:00</td>
+						    <td>Closing remarks</td>
+						  </tr>
+						</table>
+						-->
+							
+						
+
+
+					</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					<!-- call for papers -->
+					<section id="papers" class="wrapper style4 fullscreen fade-up">
+						<div class="inner">
+							<h2>Call for papers</h2>					
+							
+							
+							<p> We invite participants to submit extended abstracts <b>3+n</b> pages, with n pages (no page-limit) for the bibliography, in the <a href="https://journals.ieeeauthorcenter.ieee.org">IEEE conference style</a>. </p>
+							<p> Submissions will be reviewed by experts of their respective field. The accepted abstracts will be made available on the workshop website but will not appear in the official IEEE conference proceedings. 
+							 Participants are encouraged to submit their recent work on the topics of interest mentioned above. 
+							<!--contributions that highlight challenges in their particular sub-field as well as works that show potential synergies of combining different subfields for deformable objects manipulation. -->
+							Contributions are encouraged, but are not required, to be original. </p>
+							<p> The review process will be single-blind, meaning the submitted paper does not need to be anonymized.</p>
+							<p> Abstracts can be submitted through Microsoft CMT: <a href="#" class="to-red-mobile">TBA</a>.
+							</p>
+
+							<p> <h3>Important dates:</h3>
+
+							<ul>
+								  <li>Submission Deadline: TBA </li>
+								  <li>Notification date: TBA</li>
+								  <li>Final submission: TBA</li>
+								  <li>Workshop date: <b>TBA</b> 
+ </li>
+							</ul>
+
+							</p>
+							
+							
+
+
+						</div>
+					</section>
+
+
+
+					<!-- Schedule -->
+					<section id="talks" class="wrapper style2 spotlights">
+						<div class="inner">
+							<h2>Invited Speakers (alphabetical order)</h2>
+							
+
+							
+							<hr style="width:80%;text-align:left;margin-left:5">
+							<div class="row">
+							  
+									<p></p>
+				    				<h3 class='name-list'><b> TBA </b></h3> 
+									
+							</div>
+							<!--
+							<div class="row">
+							  <div class="column">
+							    <img src="imgs/berenson.jpeg" alt="Dmitry Berenson" class="img-list">
+							  </div>
+							  <div class="column">
+									<p></p>
+				    				<h3 class='name-list'><b> Dmitry Berenson </b></h3> 
+									
+				    				<div class='info-list'>
+									<br> 
+									Associate Professor Robotics Institute Electrical Engineering and Computer Science Dept. 
+									<br>
+									University of Michigan, USA 
+									<br>
+									<a href="http://web.eecs.umich.edu/~dmitryb/" target="_blank">Personal website</a>  
+									<br>	
+									</div>
+									<p class='talk-list'>
+									<b> Talk title:</b> Learning Where to Trust Unreliable Models for Deformable Object Manipulation <br>
+									</p>
+							  </div>
+							</div>
+
+							<hr style="width:80%;text-align:left;margin-left:5">
+							
+							
+							<div class="row">
+							  <div class="column">
+							    <img src="imgs/jeannette.png" alt="Jeannette Bohg" class="img-list">
+							  </div>
+							  <div class="column">
+									<p></p>
+				    				<h3 class='name-list'><b>Jeannette Bohg</b></h3> 
+									
+				    				<div class='info-list'>
+									<br> 
+									Assistant Professor for Robotics <br>
+									Stanford University, USA 
+									<br><a href="http://web.stanford.edu/~bohg/" target="_blank">Personal website</a> 
+									<br>	
+									</div>
+									<div class='talk-list'>
+									<b> Talk title:</b> Bridging Topology and Geometry Using Reinforcement Learning <br>
+									</div>
+							  </div>
+							</div>
+	
+							
+							<hr style="width:80%;text-align:left;margin-left:5">
+							<div class="row">
+							  <div class="column">
+							    <img src="imgs/julia.jpg" alt="Julia Borras" class="img-list">
+							  </div>
+							  <div class="column">
+									<p></p>
+				    				<h3 class='name-list'><b> Júlia Borràs Sol </b></h3> 								
+				    				<div class='info-list'>
+									<br> 
+									Researcher and Vice-Director <br>
+									Institut de Robotica i Informàtica Industrial, Spain 
+				    				<br>
+									<a href="https://www.iri.upc.edu/staff/jborras" target="_blank">Personal website</a>
+									<br>	
+									</div>
+									<div class='talk-list'>
+									<b> Talk title:</b> On analyzing and  representing cloth manipulation tasks <br>
+									</div>
+							  </div>
+							</div>
+							
+							
+							<hr style="width:80%;text-align:left;margin-left:5">
+
+							<div class="row">
+							  <div class="column">
+							    <img src="imgs/zackory.jpg" alt="Zackory Erickson" class="img-list">
+							  </div>
+							  <div class="column">
+									<p></p>
+				    				<h3 class='name-list'> Zackory Erickson </h3> 							
+				    				<div class='info-list'>
+									<br> 
+									PhD candidate <br>
+									Georgia Institute of Technology, USA 
+				    				<br>
+									<a href="http://zackory.com/" target="_blank">Personal website</a><br>	
+									</div>
+									<div class='talk-list'>
+									<b> Talk title:</b> Physics-based Cloth Simulation and Learning Towards Robotic Caregiving<br>
+									</div>
+							  </div>
+							</div>
+							
+							
+
+							<hr style="width:80%;text-align:left;margin-left:5">
+							
+							
+							
+							<div class="row">
+							  <div class="column">
+							    <img src="imgs/xiang.jpg" alt="LI, Xiang" class="img-list">
+							  </div>
+							  <div class="column">
+									<p></p>
+				    				<h3 class='name-list'><b>Xiang Li</b></h3> 
+									
+				    				<div class='info-list'>
+									<br> 
+									 Associate Professor Department of Automation<br>
+									Tsinghua University, China
+									<br>
+									<a href="https://sites.google.com/view/homepageoflixiang/home" target="_blank">Personal website</a>
+									<br>	
+									</div>
+									<div class='talk-list'>
+									<b> Talk title:</b> Adaptive Control for Robotic Manipulation of Deformable Linear Objects <br>with Offline and Online Learning of Unknown Models<br>
+									</div>
+							  </div>
+							</div>
+							
+							
+							<hr style="width:80%;text-align:left;margin-left:5">
+							
+							
+							
+							<div class="row">
+							  <div class="column">
+							    <img src="imgs/dinesh.png" alt="Dinesh Manocha" class="img-list">
+							  </div>
+							  <div class="column">
+									<p></p>
+				    				<h3 class='name-list'><b> Dinesh Manocha </b></h3> 									
+				    				<div class='info-list'>
+									<br> 
+									Paul Chrisman Iribe Professor of Computer Science, <br>Professor of Electrical and Computer Engineering <br>
+									Department of Computer Science 
+									University of Maryland, USA  
+									<br>
+									<a href="https://www.cs.umd.edu/people/dmanocha" target="_blank">Personal website</a>
+									<br>	
+									</div>
+									<div class='talk-list'>
+									<b> Talk title:</b> Learning based Methods for High-DOF Grasping<br>
+									</div>
+							  </div>
+							</div>
+							
+
+							<hr style="width:80%;text-align:left;margin-left:5">
+
+
+
+							
+							<div class="row">
+							  <div class="column">
+							    <img src="imgs/david.jpeg" alt="David Navarro-Alarcon" class="img-list">
+							  </div>
+							  <div class="column">
+									<p></p>
+				    				<h3 class='name-list'><b> David Navarro-Alarcon </b></h3> 									
+				    				<div class='info-list'>
+									<br> 
+									Assistant Professor in the Department of Mechanical Engineering <br>
+									Hong Kong Polytechnic University, Hong Kong
+				    				<br>
+									<a href="https://www.romi-lab.org/" target="_blank">Personal website</a>
+									<br>	
+									</div>
+									<div class='talk-list'>
+									<b> Talk title:</b> On Latent Space Representations for Controlling Shapes of Deformable Objects <br>
+									</div>
+							  </div>
+							</div>
+							
+	
+							
+
+							<hr style="width:80%;text-align:left;margin-left:5">
+
+							<div class="row">
+							  <div class="column">
+							    <img src="imgs/wenzhen.jpeg" alt="Wenzhen Yuan" class="img-list">
+							  </div>
+							  <div class="column">
+									<p></p>
+				    				<h3 class='name-list'> Wenzhen Yuan </h3> 							
+				    				<div class='info-list'>
+									<br> 
+									 Assistant professor in the Robotics Insititute (RI) <br>
+									Carnegie Mellon University, USA 
+				    				<br>
+									<a href="http://robotouch.ri.cmu.edu/yuanwz/" target="_blank">Personal website</a><br>	
+									</div>
+									<div class='talk-list'>
+									<b> Talk title:</b> Estimating object hardness with high-resolution tactile sensing<br>
+									</div>
+							  </div>
+							</div>
+							-->
+
+
+							
+
+					</section>
+
+					<!-- org -->
+					<section id="org" class="wrapper style3 spotlights">
+						<div class="inner">
+							<h2>Organizers (alphabetical order)</h2>
+							<ul>
+							  <li> Martina Lippi, Roma Tre University, Italy</li>
+							  <li>Daniel Seita, Carnegie Mellon University, USA</li>
+							  <li>Michael C. Welle, KTH Royal Institute of Technology, Sweden</li>					  
+							  
+							</ul>
+
+							<h2>Co-Organizers</h2>
+							<ul>
+							  <li>Hang Yin, KTH Royal Institute of Technology, Sweden</li>
+							  <li> Rika Antonova, Stanford University, USA</li>
+							  <li>Danica Kragic, KTH Royal Institute of Technology, Sweden</li>
+							  <li> Alessandro Marino, University of Cassino and Southern Lazio, Italy</li>
+							  <li>David Held, Carnegie Mellon University, USA</li>
+							  <li> Yiannis Karayiannidis, Chalmers University of Technology, Sweden</li>
+							  
+							</ul>
+							
+						
+
+
+					</section>
+
+
+
+					<!-- collaberations -->
+					<!--section id="collab" class="wrapper style4 fade-up">
+						<div class="inner">
+							<h2>Links</h2>
+							<ul>
+							<li>
+							  <b>Conference website:</b> Link to the conference website <a href="https://www.ieee-icra.org/">https://www.ieee-icra.org/</a>
+							</li>
+							</ul>
+						</div>
+					</section-->
+
+							
+
+					
+					<!-- contact -->
+					<section id="contact" class="wrapper style1 fade-up">
+						<div class="inner">
+							<h2>Contact</h2>
+							 <p> If you have any questions please contact Martina Lippi at the email: <b>martina.lippi AT uniroma3 DOT it</b>  </p>
+							
+							
+										
+							
+						</div>
+					</section>
+
+
+
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper style1-alt">
+				<div class="inner">
+				<ul class="copyright">
+						&copy; All rights reserved
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
