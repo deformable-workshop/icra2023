@@ -114,18 +114,7 @@ var x = setInterval(function() {
 							
 							
 							<p>
-							Deformable objects manipulation is a key component of a variety of everyday and specialized
-applications, ranging from domestic housework such as cloth folding or food handing, to medical
-scenarios such as surgery and suturing, up to industrial setups such as cable insertion. However, the large
-configuration space of deformable objects causes traditional modelling, planning and control
-approaches to fail when dealing with them. More specifically, unlike in the case of rigid objects, two
-main challenges arise: i) there is no clear and unified state representation and ii) the dynamics is complex
-and highly non-linear. This leads to the absence of current unified solutions and to highly domain-specific
-approaches emerging in the fields of perception, simulation, control and mechanics. In addition, the lack
-of scalable simulation environments limits possible developments in the above fields. We believe that
-robust progress can only be achieved by combining these complementary areas of robotics. Therefore,
-this workshop aims to start a discussion about the current state-of-the-art and possible research
-directions as well as connect people from different sub-fields to solve deformable objects challenges. 
+							Clothes, food, cables, and body tissue are just a few examples of deformable objects involved in both everyday and specialized tasks. Although humans are able to reliably manipulate them, automating this process using robotic platforms remains challenging. Indeed, the high number of degrees of freedom involved undermines the effectiveness of traditional modelling, planning and control methods developed for rigid object manipulation. This paves the way for exciting questions from a research and application perspective. i) How to tractably represent the state of a deformable object? ii) How to model and simulate its highly complex and non-linear dynamics? iii) What hardware tools and platforms are best suited for grasping and manipulating? We aim to discuss these and more challenges that arise from handling deformable objects by connecting scientists from different subfields of robotics, including perception, simulation, control, and mechanics. Following our first edition of the workshop at ICRA 2021, the objective for the proposed second edition is to further identify promising research directions and analyze current state-of-the-art solutions with an emphasis on highlighting recent results since the 2021 workshop. We plan to facilitate this through invited talks and will foster new collaborations to connect young researchers with senior ones. 
 							</p>
 							
 							<p>  </p>
@@ -144,68 +133,40 @@ directions as well as connect people from different sub-fields to solve deformab
 					<section id="content" class="wrapper style2 fade-up">
 						<div class="inner">
 							<h2>Content</h2>
-							<h3>Event description </h3>
+							<h3>Topics</h3>
 
 							<p> 
-								The workshop is tailored towards researchers interested at deformable object manipulation and closely
-related problems such as modeling, perception, representation and mechanics. This workshop would
-give the community a chance to: identify open research challenges, find new applications for techniques
-that already exist in closely related areas, foster new collaborations, and get a good overview of the state
--of-the-art from the invited talks. Speakers from the forefront of the research on deformable objects are
-invited to provide top-level insights. Furthermore, a review process from experienced researchers will
-be carried out giving young researchers the opportunity to receive valuable feedbacks.
-The scope of the workshop is intentionally broad as we think that different aspects need to be taken into
-account to effectively handle deformable objects and we want to enclose them in a single event, filling
-the lack of a dedicated session in the main robotics conferences.  
-							</p>
-
-							
-							
-							<p> </p>	
-
-							<h3>Topic relevance </h3>
-							<p> Despite the presence of deformable objects in a wide range of domains and tasks, endowing robots with
-the ability to manipulate them is still an open problem. This is motivated by the extreme complexity of
-representation and dynamics modeling of such objects. Although different methodologies exist in the
-recent state-of-the-art, tackling different aspects of deformable objects, no unified and comprehensive
-solution exists yet that can be easily generalized to non-specific objects. 
-As possible approaches to state representation and modelling, topological coordinates and Finite
-Element Methods have been adopted for solving specific tasks. In contrast, data-driven approaches can
-be leveraged to circumvent explicit modelling at the cost of an expensive data collection. For this,
-although simulation environments would be most suited for collecting large amount of data, the current
-state-of-the-art does not enable it in an efficient and scalable manner. Moreover, even when a
-simulation setup is employed, the transfer of the acquired skills into real-world may be unsuccessful due
-to inaccurate simulation models of the involved dynamics. Alternatively, demonstrating specific
-interactions, and learning from them by imitation, can improve the efficiency of the system setup at the
-cost of its generality.
-In addition, further aspects need to be addressed to effectively manipulate deformable objects. Among
-those, employment and coordination of two or more arms can be necessary to properly manipulate
-highly deformable objects for both prehensile and non-prehensile manipulation. Finding efficient ways
-to combine planning and control is equally important in this regard. Finally, implementing the planned
-interaction can also be improved by specialized grippers or sensors, e.g., optical and haptic perception.</p>
-
-<p>
-
-Specifically, this workshop will include (but is not limited to) the following topics:  </p>
+								The workshop aims to explore different aspects that will potentially allow robots to autonomously manipulate deformable objects in the near future. Enabling such manipulation is crucial for a variety of domains and tasks, e.g., domestic, industrial and surgical contexts, which involve various forms of object deformability. However, the complexity of representing and modeling the dynamics of these objects results in the lack of a current unified solution that can be adapted to a wide range of objects.
+Specifically, the workshop will focus on, but is not limited to, the following topics for deformable object manipulation:
 
 <ul>
   <li>Representation and state estimation</li>
   <li> Simulation and modeling </li>
   <li>Transfer from simulation to reality</li>
-  <li>Data-driven methods: end-to-end learning, learning from demonstration, etc. </li>
+  <li>Learning to manipulate using data-driven methods such as reinforcement learning and learning from demonstrations </li>
   <li>Perception: state tracking, parameter identification, property detection (e.g. landmarks for
 garments) and classification, etc. </li>
-  <li>Control, visual servoing and planning</li>
-  <li>Multi-arm manipulation</li>
+  <li>Control, visual servoing and planning</li>>
   <li>Specialized tools, e.g. grippers, and sensors</li>
-  <li>Application-specific challenges: cloth folding, surgical tasks, etc.</li>
+  <li>Multi-arm manipulation</li
+  <li>Application-specific challenges: cloth folding, surgical tasks, food cutting, etc.</li>
 </ul>
-
-
-
+							
+							</p>
 
 							
-
+							
+							<p> </p>	
+<!--
+							<h3>Workshop format </h3>
+						<p>
+						The workshop will include: 
+<ul><li>Invited talks by selected speakers, each consisting of about 25 minutes of live presentation followed by 5 minutes for Q&A;<\li> 
+<li>Accepted extended abstracts (3 pages with unlimited references and appendix) presented in poster sessions and selected spotlight talks. In case of a hybrid or virtual workshop, we will ask for pre-recorded spotlight talks for a smoother execution in case of connection issues. However, for each selected contribution, at least one author will be required to be present during the workshop for a live Q&A session;  </li>
+<li>A group discussion session where different discussion groups will be formed from the attendees. Each group will be moderated by an organizer and will focus on a specific topic in the scope of the workshop. Moreover, organizers will annotate relevant insights during the discussions and will share them with the entire audience during the last part of this session. If a virtual component exists, we will facilitate participation with the help of breakout rooms.  </li>
+<li>A panel discussion at the end of the workshop, moderated by the organizers,  for discussing challenges and promising directions for deformable object manipulation with experts of the field. Speakers will be informed in advance of the selected topics to make the discussion more effective. 
+	</p>
+-->
 
 						</div>
 					</section>
@@ -246,7 +207,8 @@ garments) and classification, etc. </li>
 						    <td>10:15 - 11:00</td>
 						    <td>Spotlight talks #1:
 								<ul>								
-						    	<li> <b>S. Funabashi</b>, T. Isobe, F. Hongyi, T. Ogata, A. Schmitz, S. Sugano - In-Hand Manipulation of Multi-Fingered Hand with Daily Objects Based on Graph Convolutional Network and 3-Axis Tactile Sensing <a href="spotlight/spot_in_hand_manipulation.pdf" target="_blank">[PDF]</a>  <a href="https://youtu.be/YXoGqTyZims" target="_blank">[Video]</a> <br></li>
+						    	<li> <b>S. Funabashi</b>, T. Isobe, F. Hongyi, T. Ogata, A. Schmitz, S. Sugano - In-Hand Manipulation of Multi-Fingered Hand with Daily Objects Based on Graph Convolutional Network and 3-Axis Tactile Sensing <a href="spotlight/spot_in_hand_manipulation.pdf" 
+"_blank">[PDF]</a>  <a href="https://youtu.be/YXoGqTyZims" target="_blank">[Video]</a> <br></li>
 						    	<li> <b>S. Marullo</b>, G. Salvietti, D. Prattichizzo - The Mag-Gripper: A Soft-Rigid Gripper Augmented with an Electromagnet to Precisely Handle Clothes <a href="spotlight/spot_the_mag_gripper.pdf" target="_blank">[PDF]</a> <a href="https://youtu.be/9CGzz0C1avI" target="_blank">[Video]</a> <br></li>
 						    	<li> <b>M. Lee</b>, J. Lee, J. Yoon, D. Lee - Interactive Real-Time Simulation of Robotic Snap Connection Process <a href="spotlight/spot_interactive_real_time.pdf" target="_blank">[PDF]</a> <a href="https://youtu.be/QRSFmom8Dig" target="_blank">[Video]</a> <br></li>
 						    	<li><b> B. Maric</b>, M. Polic, M. Orsag - Soft robotics approach to autonomous plastering <a href="spotlight/spot_soft_robotics.pdf" target="_blank">[PDF]</a> <a href="https://youtu.be/onHI9BCXncM" target="_blank">[Video]</a> <br></li>
@@ -669,6 +631,7 @@ garments) and classification, etc. </li>
 		<!-- Footer -->
 			<footer id="footer" class="wrapper style1-alt">
 				<div class="inner">
+					Participants are required to abide the <a href="https://www.ieee-ras.org/about-ras/diversity-page/ieee-ras-code-of-conduct" target="_blank">IEEE RAS Code of Conduct</a>
 				<ul class="copyright">
 						&copy; All rights reserved
 					</ul>
