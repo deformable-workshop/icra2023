@@ -3972,6 +3972,12 @@ h3.name-list{
 #schedule_tab tr:hover {
     background-color: initial !important;
 }
+#schedule_tab tr:hover a {
+  color: #c0c8ea;
+}
+#schedule_tab tr:hover td {
+  color: #c0c8ea;
+}
 
 ul{
 	margin:0 !important; 
