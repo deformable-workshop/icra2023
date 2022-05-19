@@ -3905,7 +3905,10 @@ input, select, textarea {
 		background-repeat: no-repeat;
 		background-size: 100% 100%;
 	}
-
+	#intro iframe {
+  margin: auto;
+  display: block;
+}
 		
 
 			@media screen and (max-width: 980px) {
